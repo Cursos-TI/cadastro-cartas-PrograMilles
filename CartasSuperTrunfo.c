@@ -5,6 +5,7 @@
 // Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
 
 int main() {
+  // OBS PESSOAL: REFAZENDO POIS O OUTRO FOI DELETADO POR ENGANO
   // Área para definição das variáveis para armazenar as propriedades das cidades c1
   char estadoc1[50], codigoc1[4], cidadec1[50];
   unsigned long int populacaoc1;
@@ -15,7 +16,6 @@ int main() {
   printf("Super Trunfo - Mestre\n\n");
 
    // cadastro da carta 1
-   // adição de scanset para ler strings com espaços
 
   printf("CARTA 1\n\n");
 
@@ -48,7 +48,6 @@ int main() {
 
 
    // cadastro da carta 2
-   // adição de scanset para ler strings com espaços
 
   printf("\n\nCARTA 2\n\n");
 

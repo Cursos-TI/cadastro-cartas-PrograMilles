@@ -13,6 +13,8 @@ int main() {
   int pontosturc1;
   // adição de densidade e pib per capita
   float densc1, pibpcc1;
+  // adição de superpoderes
+  float superc1;
   // Área para entrada de dados carta1
 
   printf("Super Trunfo - Mestre\n\n");
@@ -50,6 +52,11 @@ int main() {
   pibpcc1 = pibc1 / areac1;
   printf("PIB per Capita: %.2f reais\n", pibpcc1);
 
+  superc1 = populacaoc1 + areac1 + pibc1 + pibpcc1 + (1 / densc1) + pontosturc1;
+  printf("Superpoder: %.2f\n", superc1);
+
+
+
   // Área para definição das variáveis para armazenar as propriedades das cidades c2
   char estadoc2[50], codigoc2[4], cidadec2[50];
   unsigned long int populacaoc2;
@@ -57,6 +64,8 @@ int main() {
   int pontosturc2;
   // adição de densidade e pib per capita
   float densc2, pibpcc2;
+  // adição de superpoderes
+  float superc2;
 
   // Área para entrada de dados carta2
   // cadastro da carta 2
@@ -91,6 +100,21 @@ int main() {
 
   pibpcc2 = pibc2 / areac2;
   printf("PIB per Capita: %.2f reais\n", pibpcc2);
+
+  superc2 = populacaoc2 + areac2 + pibc2 + pibpcc2 + (1 / densc2) + pontosturc2;
+  printf("Superpoder: %.2f\n", superc2);
+
+  // pontuação das cartas
+
+  printf("\n\nPONTUAÇÃO!\n\n");
+
+  printf("População → Carta 1 venceu Carta 2: %d\n", populacaoc1 > populacaoc2);
+  printf("Área → Carta 1 venceu Carta 2: %d\n", areac1 > areac2);
+  printf("PIB → Carta 1 venceu Carta 2: %d\n", pibc1 > pibc2);
+  printf("Pontos Turísticos → Carta 1 venceu Carta 2: %d\n", pontosturc1 > pontosturc2);
+  printf("PIB per Capita → Carta 1 venceu Carta 2: %d\n", pibpcc1 > pibpcc2);
+  printf("Densidade Populacional → Carta 1 venceu Carta 2: %d\n", densc1 < densc2);
+  printf("Superpoder → Carta 1 venceu Carta 2: %d\n", superc1 > superc2);
 
 
 return 0;

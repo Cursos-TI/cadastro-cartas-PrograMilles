@@ -11,22 +11,24 @@ int main() {
   unsigned long int populacaoc1;
   float areac1, pibc1;
   int pontosturc1;
-  // Área para entrada de dados
+  // adição de densidade e pib per capita
+  float densc1, pibpcc1;
+  // Área para entrada de dados carta1
 
   printf("Super Trunfo - Mestre\n\n");
 
-   // cadastro da carta 1
-
+  // cadastro da carta 1
+  // adição de scanset no scanf para ler string com espaços
   printf("CARTA 1\n\n");
 
   printf("Estado: ");
-  scanf("%s", estadoc1);
+  scanf(" %[^\n]", estadoc1);
 
   printf("Código: ");
   scanf("%s", codigoc1);
 
   printf("Cidade: ");
-  scanf("%s", cidadec1);
+  scanf(" %[^\n]", cidadec1);
 
   printf("População: ");
   scanf("%lu", &populacaoc1);
@@ -40,25 +42,35 @@ int main() {
   printf("Pontos Turísticos: ");
   scanf("%d", &pontosturc1);
 
-  // Área para definição das variáveis para armazenar as propriedades das cidades
+  // adição de cálculos
+
+  densc1 = (float)populacaoc1 / areac1;
+  printf("Densidade Populacional: %.2f hab/km²\n", densc1);
+
+  pibpcc1 = pibc1 / areac1;
+  printf("PIB per Capita: %.2f reais\n", pibpcc1);
+
+  // Área para definição das variáveis para armazenar as propriedades das cidades c2
   char estadoc2[50], codigoc2[4], cidadec2[50];
   unsigned long int populacaoc2;
   float areac2, pibc2;
   int pontosturc2;
+  // adição de densidade e pib per capita
+  float densc2, pibpcc2;
 
-
-   // cadastro da carta 2
-
+  // Área para entrada de dados carta2
+  // cadastro da carta 2
+  // adição de scanset no scanf para ler string com espaços
   printf("\n\nCARTA 2\n\n");
 
   printf("Estado: ");
-  scanf("%s", estadoc2);
+  scanf(" %[^\n]", estadoc2);
 
   printf("Código: ");
   scanf("%s", codigoc2);
   
   printf("Cidade: ");
-  scanf("%s", cidadec2);
+  scanf(" %[^\n]", cidadec2);
 
   printf("População: ");
   scanf("%lu", &populacaoc2);
@@ -71,6 +83,14 @@ int main() {
 
   printf("Pontos Turísticos: ");
   scanf("%d", &pontosturc2);
+
+  // adição de cálculos
+
+  densc2 = (float)populacaoc2 / areac2;
+  printf("Densidade Populacional: %.2f hab/km²\n", densc2);
+
+  pibpcc2 = pibc2 / areac2;
+  printf("PIB per Capita: %.2f reais\n", pibpcc2);
 
 
 return 0;
